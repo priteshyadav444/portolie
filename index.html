@@ -1,130 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pritesh Yadav's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#languages">Languages</a></li>
-                <li><a href="#summary">Summary</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Pritesh Yadav's portfolio showcasing skills, education, experience, projects, and achievements."
+    />
+    <meta
+      name="keywords"
+      content="Pritesh Yadav, Web Developer, Laravel, PHP, Node.js, Vue.js, Portfolio"
+    />
+    <meta name="author" content="Pritesh Yadav" />
+    <link rel="canonical" href="https://priteshyadav.in" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pritesh Yadav's Portfolio" />
+    <meta
+      property="og:description"
+      content="Pritesh Yadav's portfolio showcasing skills, education, experience, projects, and achievements."
+    />
+    <meta
+      property="og:image"
+      content="https://priteshyadav.in/path/to/profile-picture.jpg"
+    />
+    <meta property="og:url" content="https://priteshyadav.in" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pritesh Yadav's Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Pritesh Yadav's portfolio showcasing skills, education, experience, projects, and achievements."
+    />
+    <meta
+      name="twitter:image"
+      content="https://priteshyadav.in/path/to/profile-picture.jpg"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="canonical" href="https://priteshyadav.in" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pritesh Yadav",
+        "url": "https://priteshyadav.in",
+        "image": "https://priteshyadav.in/path/to/profile-picture.jpg",
+        "sameAs": [
+          "https://linkedin.com/in/priteshyadav444/",
+          "https://github.com/priteshyadav444"
+        ],
+        "jobTitle": "Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Kody Technolab Ltd."
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vapi",
+          "addressRegion": "Gujarat",
+          "addressCountry": "India"
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "VNSGU Surat, Gujarat"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "CHARUSAT Anand, Gujarat"
+          }
+        ],
+        "knowsLanguage": [
+          {
+            "@type": "Language",
+            "name": "Hindi"
+          },
+          {
+            "@type": "Language",
+            "name": "English",
+            "alternateName": "en"
+          }
+        ],
+        "description": "Web Developer with 2 years of experience specializing in Laravel, PHP, Node.js, and Vue.js. Proven expertise in building secure REST APIs and integrating third-party services such as SMS and payment gateways. Demonstrates strong capabilities in database management with MySQL, performance optimization, and authentication methods including OAuth and JWT. Committed to delivering high-quality applications while embracing new challenges in full-stack development."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Pritesh Yadav's Portfolio",
+        "url": "https://priteshyadav.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://priteshyadav.in/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://priteshyadav.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://priteshyadav.in/#about"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Skills",
+            "item": "https://priteshyadav.in/#skills"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Education",
+            "item": "https://priteshyadav.in/#education"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Languages",
+            "item": "https://priteshyadav.in/#languages"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Summary",
+            "item": "https://priteshyadav.in/#summary"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Experience",
+            "item": "https://priteshyadav.in/#experience"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Projects",
+            "item": "https://priteshyadav.in/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Achievements",
+            "item": "https://priteshyadav.in/#achievements"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "Contact",
+            "item": "https://priteshyadav.in/#contact"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="bg-primary text-white py-3">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="#">Pritesh Yadav</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#languages">Languages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#summary">Summary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experience">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#achievements">Achievements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
             </ul>
+          </div>
         </nav>
+      </div>
     </header>
 
-    <section id="about">
-        <h1>About Me</h1>
-        <p><strong>Name:</strong> Pritesh Yadav</p>
-        <p><strong>Location:</strong> Vapi, Gujarat</p>
-        <p><strong>Phone:</strong> 9104104274</p>
-        <p><strong>Email:</strong> <a href="mailto:priteshyadav2015@gmail.com">priteshyadav2015@gmail.com</a></p>
-    </section>
+    <main>
+      <section id="about" class="py-5">
+        <div class="container">
+          <h1 class="mb-4">About Me</h1>
+          <p><strong>Name:</strong> Pritesh Yadav</p>
+          <p><strong>Location:</strong> Vapi, Gujarat</p>
+          <p><strong>Phone:</strong> 9104104274</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:priteshyadav2015@gmail.com"
+              >priteshyadav2015@gmail.com</a
+            >
+          </p>
+        </div>
+      </section>
 
-    <section id="skills">
-        <h1>Skills</h1>
-        <ul>
-            <li>Core PHP</li>
-            <li>Javascript</li>
-            <li>C/C++</li>
-            <li>Laravel</li>
-            <li>Vue.js</li>
-            <li>REST API handling</li>
-            <li>Third-party integrations, API integration</li>
-            <li>Laravel Queues & Caching – Queue handling</li>
-            <li>Git</li>
-            <li>Database Design and Management</li>
-            <li>MySQL</li>
-            <li>Eloquent ORM</li>
-            <li>OAuth</li>
-            <li>Performance optimization</li>
-            <li>Socket.IO</li>
-            <li>SEO optimization</li>
-            <li>Testing and debugging</li>
-        </ul>
-    </section>
+      <section id="skills" class="py-5 bg-light">
+        <div class="container">
+          <h1 class="mb-4">Skills</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li>Core PHP</li>
+                <li>Javascript</li>
+                <li>C/C++</li>
+                <li>Laravel</li>
+                <li>Vue.js</li>
+                <li>REST API handling</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li>Third-party integrations, API integration</li>
+                <li>Laravel Queues & Caching – Queue handling</li>
+                <li>Git</li>
+                <li>Database Design and Management</li>
+                <li>MySQL</li>
+                <li>Eloquent ORM</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li>OAuth</li>
+                <li>Performance optimization</li>
+                <li>Socket.IO</li>
+                <li>SEO optimization</li>
+                <li>Testing and debugging</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="education">
-        <h1>Education</h1>
-        <p><strong>January 2021</strong><br>VNSGU Surat, Gujarat<br>BCA</p>
-        <p><strong>June 2023</strong><br>CHARUSAT Anand, Gujarat<br>MCA</p>
-    </section>
+      <section id="education" class="py-5">
+        <div class="container">
+          <h1 class="mb-4">Education</h1>
+          <p>
+            <strong>January 2021</strong><br />VNSGU Surat, Gujarat<br />BCA
+          </p>
+          <p>
+            <strong>June 2023</strong><br />CHARUSAT Anand, Gujarat<br />MCA
+          </p>
+        </div>
+      </section>
 
-    <section id="languages">
-        <h1>Languages</h1>
-        <p><strong>Hindi</strong><br>First Language</p>
-        <p><strong>English</strong><br>Proficient (C2)</p>
-    </section>
+      <section id="languages" class="py-5 bg-light">
+        <div class="container">
+          <h1 class="mb-4">Languages</h1>
+          <p><strong>Hindi</strong><br />First Language</p>
+          <p><strong>English</strong><br />Proficient (C2)</p>
+        </div>
+      </section>
 
-    <section id="summary">
-        <h1>Summary</h1>
-        <p>Web Developer with 2 years of experience specializing in Laravel, PHP, Node.js, and Vue.js. Proven expertise in building secure REST APIs and integrating third-party services such as SMS and payment gateways. Demonstrates strong capabilities in database management with MySQL, performance optimization, and authentication methods including OAuth and JWT. Committed to delivering high-quality applications while embracing new challenges in full-stack development.</p>
-    </section>
+      <section id="summary" class="py-5">
+        <div class="container">
+          <h1 class="mb-4">Summary</h1>
+          <p>
+            Web Developer with 2 years of experience specializing in Laravel,
+            PHP, Node.js, and Vue.js. Proven expertise in building secure REST
+            APIs and integrating third-party services such as SMS and payment
+            gateways. Demonstrates strong capabilities in database management
+            with MySQL, performance optimization, and authentication methods
+            including OAuth and JWT. Committed to delivering high-quality
+            applications while embracing new challenges in full-stack
+            development.
+          </p>
+        </div>
+      </section>
 
-    <section id="experience">
-        <h1>Experience</h1>
-        <p><strong>December 2022 - Current</strong><br>Kody Technolab Ltd. - Ahmedabad<br>Laravel Developer</p>
-        <p>Developed scalable Laravel web apps for e-commerce, marketplaces, and real-time support, integrating payment and logistics APIs with backend optimizations (database tuning, queues, caching). Implemented SEO best practices and real-time support via Socket.IO chat.</p>
-    </section>
+      <section id="experience" class="py-5 bg-light">
+        <div class="container">
+          <h1 class="mb-4">Experience</h1>
+          <p>
+            <strong>December 2022 - Current</strong><br />Kody Technolab Ltd. -
+            Ahmedabad<br />Laravel Developer
+          </p>
+          <p>
+            Developed scalable Laravel web apps for e-commerce, marketplaces,
+            and real-time support, integrating payment and logistics APIs with
+            backend optimizations (database tuning, queues, caching).
+            Implemented SEO best practices and real-time support via Socket.IO
+            chat.
+          </p>
+        </div>
+      </section>
 
-    <section id="projects">
-        <h1>Projects</h1>
-        <ul>
+      <section id="projects" class="py-5">
+        <div class="container">
+          <h1 class="mb-4">Projects</h1>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Millionaire Powerplay</h5>
+                  <p class="card-text">
+                    Developed an integrated API for winner payments utilizing
+                    Zenith Bank's bulk payment system on an American lottery
+                    website. Managed payment failures, ensured validation, and
+                    set up both admin and user notifications.
+                  </p>
+                  <a
+                    href="https://millionairepowerplay.com"
+                    class="btn btn-primary"
+                    >Visit Project</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Tyrewide</h5>
+                  <p class="card-text">
+                    Implemented a guest flow for an e-commerce website, along
+                    with optimized SEO strategies to enhance visibility.
+                    Utilized various tools, including Google Analytics, GTag,
+                    GA4, Google Search Console, Ahrefs, SEMrush, and Screaming
+                    Frog, to manage sitemaps, user-friendly URLs, meta tags, and
+                    301 redirects.
+                  </p>
+                  <a href="https://tyrewide.co.za" class="btn btn-primary"
+                    >Visit Project</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Actiday</h5>
+                  <p class="card-text">
+                    Developed an end-to-end vendor API and integrated it into
+                    the customer panel using Vue.js for a service marketplace
+                    platform. Additionally, worked on the admin panel, handling
+                    payouts, and managing customers, vendors, users, and master
+                    data configuration.
+                  </p>
+                  <a href="https://actiday.co" class="btn btn-primary"
+                    >Visit Project</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Begsha</h5>
+                  <p class="card-text">
+                    Created an eCommerce marketplace platform featuring
+                    logistics API integration, multiple payment gateways, vendor
+                    payout systems, and complete vendor API integration.
+                  </p>
+                  <a href="https://begsha.com" class="btn btn-primary"
+                    >Visit Project</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">MoneyHouse</h5>
+                  <p class="card-text">
+                    Developed a platform for kitty parties and chit funds,
+                    incorporating reverse auction features and a digital wallet.
+                    Integrated Paytm for payments, built REST APIs with Node.js,
+                    and designed the frontend using React.js.
+                  </p>
+                  <a
+                    href="https://moneyhouse.onrender.com/"
+                    class="btn btn-primary"
+                    >Visit Project</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Task Management Tool</h5>
+                  <p class="card-text">
+                    Developed an interactive platform to divide projects into
+                    tasks using AngularJS for the frontend and secured APIs with
+                    JWT tokens in Node.js.
+                  </p>
+                  <a href="https://taskEasy.co.in" class="btn btn-primary"
+                    >Visit Project</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements" class="py-5 bg-light">
+        <div class="container">
+          <h1 class="mb-4">Achievements</h1>
+          <ul class="list-unstyled">
             <li>
-                <strong>Millionaire Powerplay - <a href="https://millionairepowerplay.com">millionairepowerplay.com</a></strong>
-                <p>Developed an integrated API for winner payments utilizing Zenith Bank's bulk payment system on an American lottery website. Managed payment failures, ensured validation, and set up both admin and user notifications.</p>
+              Published articles on Medium and GeeksforGeeks, with strong reader
+              engagement
             </li>
             <li>
-                <strong>Tyrewide - <a href="https://tyrewide.co.za">tyrewide.co.za</a></strong>
-                <p>Implemented a guest flow for an e-commerce website, along with optimized SEO strategies to enhance visibility. Utilized various tools, including Google Analytics, GTag, GA4, Google Search Console, Ahrefs, SEMrush, and Screaming Frog, to manage sitemaps, user-friendly URLs, meta tags, and 301 redirects.</p>
+              Ranked in the top 5 on GeeksforGeeks at CHARUSAT University;
+              solved over 210 coding questions
             </li>
             <li>
-                <strong>Actiday - <a href="https://actiday.co">actiday.co</a></strong>
-                <p>Developed an end-to-end vendor API and integrated it into the customer panel using Vue.js for a service marketplace platform. Additionally, worked on the admin panel, handling payouts, and managing customers, vendors, users, and master data configuration.</p>
+              Graduated top of the class with a Gold Medal at ROFEL College,
+              VAPI (VNSGU)
             </li>
-            <li>
-                <strong>Begsha - <a href="https://begsha.com">begsha.com</a></strong>
-                <p>Created an eCommerce marketplace platform featuring logistics API integration, multiple payment gateways, vendor payout systems, and complete vendor API integration.</p>
-            </li>
-            <li>
-                <strong>MoneyHouse - <a href="https://moneyhouse.onrender.com/">moneyhouse.onrender.com</a></strong>
-                <p>Developed a platform for kitty parties and chit funds, incorporating reverse auction features and a digital wallet. Integrated Paytm for payments, built REST APIs with Node.js, and designed the frontend using React.js.</p>
-            </li>
-            <li>
-                <strong>Task Management Tool - <a href="https://taskEasy.co.in">taskEasy.co.in</a></strong>
-                <p>Developed an interactive platform to divide projects into tasks using AngularJS for the frontend and secured APIs with JWT tokens in Node.js.</p>
-            </li>
-        </ul>
-    </section>
+          </ul>
+        </div>
+      </section>
 
-    <section id="achievements">
-        <h1>Achievements</h1>
-        <ul>
-            <li>Published articles on Medium and GeeksforGeeks, with strong reader engagement</li>
-            <li>Ranked in the top 5 on GeeksforGeeks at CHARUSAT University; solved over 210 coding questions</li>
-            <li>Graduated top of the class with a Gold Medal at ROFEL College, VAPI (VNSGU)</li>
-        </ul>
-    </section>
+      <section id="contact" class="py-5">
+        <div class="container">
+          <h1 class="mb-4">Contact</h1>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://linkedin.com/in/priteshyadav444/"
+              >linkedin.com/in/priteshyadav444/</a
+            >
+          </p>
+          <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/priteshyadav444"
+              >github.com/priteshyadav444</a
+            >
+          </p>
+          <p>
+            <strong>Website:</strong>
+            <a href="https://priteshyadav.in">priteshyadav.in</a>
+          </p>
+        </div>
+      </section>
+    </main>
 
-    <section id="contact">
-        <h1>Contact</h1>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/priteshyadav444/">linkedin.com/in/priteshyadav444/</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/priteshyadav444">github.com/priteshyadav444</a></p>
-        <p><strong>Website:</strong> <a href="https://priteshyadav.in">priteshyadav.in</a></p>
-    </section>
-
-    <footer>
+    <footer class="bg-primary text-white py-3">
+      <div class="container text-center">
         <p>&copy; 2024 Pritesh Yadav</p>
+      </div>
     </footer>
-</body>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js" defer></script>
+  </body>
 </html>
